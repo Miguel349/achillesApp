@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0"><!-- unused for Cloud SDK based tooling -->
+    <version>1</version>
+    <runtime>java8</runtime>
+    <threadsafe>true</threadsafe>
+    <sessions-enabled>true</sessions-enabled>
+    <system-properties>
+        <property name="java.util.logging.config.file" value="WEB-INF/classes/logging.properties" />
+    </system-properties>
+    <instance-class>F1</instance-class>
+    <static-files>
+        <include path="/resources/**" >
+        </include>
+    </static-files>
+    <async-session-persistence enabled="true" />
+    <use-google-connector-j>true</use-google-connector-j>
+</appengine-web-app>
