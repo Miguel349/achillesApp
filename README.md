@@ -3,6 +3,7 @@
 
 # Team Members: Alberto de Miguel, Diego Gutierrez Blanco, Miguel Pagan Murphy, Sebastián Paduano
 
+# Android App in different repo: https://github.com/soypaduano/achillesApp_Android
 
 # AchillesProject
 
