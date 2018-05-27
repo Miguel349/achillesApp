@@ -32,15 +32,15 @@ var ACHILLES = (function () {
       else{
         foot="right";
       }
-      var sensor1=0;
-      var sensor2=1;
+      var sensor1=2;
+      var sensor2=2;
       var sensor3=2;
       var sensor4=5;
 
       $.post( "/achilles/recordData",{foot:foot,sensor1:sensor1,sensor2:sensor2,sensor3:sensor3,sensor4:sensor4,calories:calories,meters:meters}, function( data ) {
-        alert(data);
+        $('#'+foot).removeClass("false").removeClass("true").addClass(data.toString());
       });
-    }, 1000);
+    }, 10000);
 
   }
 
