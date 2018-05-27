@@ -47,8 +47,8 @@ var ACHILLES = (function () {
       var sensor3= Math.floor(Math.random() * 5) ;
       var sensor4= Math.floor(Math.random() * 5) ;
 
-      calories += calories + 0,1;
-      meters += meters + 0,2;
+      calories = calories + 0.01;
+      meters = meters + 0.02;
 
        $('#kmRecorridos').text(meters);
        $('#caloriasQuemadas').text(calories);
