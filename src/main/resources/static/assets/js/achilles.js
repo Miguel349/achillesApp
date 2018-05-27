@@ -18,6 +18,7 @@ var ACHILLES = (function () {
       $('.main-view').hide();
       $('#startSesion').hide();
       $('#runningInterface').show();
+      startRunning();
     });
 
   }
@@ -39,7 +40,7 @@ var ACHILLES = (function () {
       $.post( "/achilles/recordData",{foot:foot,sensor1:sensor1,sensor2:sensor2,sensor3:sensor3,sensor4:sensor4,calories:calories,meters:meters}, function( data ) {
         alert(data);
       });
-    }, 3000);
+    }, 1000);
 
   }
 

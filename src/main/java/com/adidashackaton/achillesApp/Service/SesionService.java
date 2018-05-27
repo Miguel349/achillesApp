@@ -37,7 +37,7 @@ public class SesionService {
         sesion.setRightSensor4(rightFootSensor4);
         return sesionRepository.save(sesion);
     }
-    public Sesion createSesion(){
+    public Sesion createSesion(User user){
         Sesion sesion=new Sesion();
         sesion.setCalories(0);
         sesion.setMeters(0);
@@ -49,6 +49,7 @@ public class SesionService {
         sesion.setRightSensor2(0);
         sesion.setRightSensor3(0);
         sesion.setRightSensor4(0);
+        sesion.setUser(user);
         return sesionRepository.save(sesion);
     }
 }

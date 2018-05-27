@@ -34,10 +34,10 @@ public class BaseRestController extends Base{
 
     @PostMapping("/achilles/recordData")
     public Boolean recordData(String foot, Double sensor1, Double sensor2, Double sensor3, Double sensor4, Double calories, Double meters, HttpServletRequest httpServletRequest){
-        String userId = getLoggedUserId(httpServletRequest);
-        userId="sebas";
+        Integer userId = getLoggedUserId(httpServletRequest);
+        userId=0;
         if (userId != null) {
-            User user = userService.getUser(userId);
+            User user = userService.getUser(0);
             if(user==null){
                 return false;
             }
@@ -46,7 +46,7 @@ public class BaseRestController extends Base{
             String sport = "football";
 
             if (sport.equals("football")) {
-                if (sensor1 > 1 && sensor2 > 1 && sensor3 > 1) {
+                if (sensor1 > 1 && sensor2 > 1 && sensor3 > 1 && sensor4>1) {
                     return true;
                 } else {
                     return false;
@@ -62,7 +62,7 @@ public class BaseRestController extends Base{
         return null;
     }
     @PostMapping("/achilles/register")
-    public Boolean register (String id, String gender, Integer edad) {
+    public Boolean register (String name, String gender, Integer edad, Integer id) {
         if(id!=null && gender!=null && edad !=null){
             userService.saveNewUser(id,edad,gender);
             return true;
@@ -95,11 +95,12 @@ public class BaseRestController extends Base{
     }
 
     @PostMapping("/achilles/initSession")
-    public String initSesion(HttpServletRequest httpServletRequest){
-        String userId=getLoggedUserId(httpServletRequest);
-        if(userId!=null){
-
-        }
-        return "";
+    public Boolean initSesion(HttpServletRequest httpServletRequest){
+       Integer userId=getLoggedUserId(httpServletRequest);
+       User user=userService.getUser(userId);
+       Sesion sesion=sesionService.createSesion(user);
+      HttpSession session = httpServletRequest.getSession(true);
+      session.setAttribute("sesion", sesion.getId());
+        return true;
     }
 }

@@ -6,9 +6,9 @@ import javax.servlet.http.HttpSession;
 public class Base {
 
 
-    public String getLoggedUserId(HttpServletRequest httpServletRequest){
+    public Integer getLoggedUserId(HttpServletRequest httpServletRequest){
         HttpSession session = httpServletRequest.getSession(true);
-        String userId=(String)session.getAttribute("user");
+        Integer userId=(Integer)session.getAttribute("user");
         return userId;
     }
 

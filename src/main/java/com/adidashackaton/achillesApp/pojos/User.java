@@ -17,7 +17,7 @@ public class User {
     @Id
     @Getter
     @Setter
-    private String id;
+    private int id;
 
     @Getter
     @Setter
@@ -27,4 +27,7 @@ public class User {
     @Setter
     private String gender;
 
+    @Getter
+    @Setter
+    private String name;
 }

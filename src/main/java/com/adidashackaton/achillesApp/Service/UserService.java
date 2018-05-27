@@ -12,7 +12,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User saveNewUser(String id, int age, String gender){
+    public User saveNewUser(Integer id, int age, String gender){
         User user = new User();
         user.setId(id);
         user.setAge(age);
@@ -20,7 +20,7 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public User getUser(String id){
+    public User getUser(Integer id){
         User user=userRepository.findById(id);
         return user;
     }
