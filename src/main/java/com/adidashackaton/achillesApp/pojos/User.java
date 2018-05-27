@@ -17,7 +17,7 @@ public class User {
     @Id
     @Getter
     @Setter
-    private int id;
+    private String id;
 
     @Getter
     @Setter

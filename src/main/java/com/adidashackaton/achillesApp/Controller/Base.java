@@ -6,13 +6,13 @@ import javax.servlet.http.HttpSession;
 public class Base {
 
 
-    public Integer getLoggedUserId(HttpServletRequest httpServletRequest){
+    public String getLoggedUserId(HttpServletRequest httpServletRequest){
         HttpSession session = httpServletRequest.getSession(true);
-        Integer userId=(int)session.getAttribute("user");
+        String userId=(String)session.getAttribute("user");
         return userId;
     }
 
-    public void setLoggedUserId(HttpServletRequest httpServletRequest, int id){
+    public void setLoggedUserId(HttpServletRequest httpServletRequest, String id){
         HttpSession session = httpServletRequest.getSession(true);
         session.setAttribute("user", id);
     }
