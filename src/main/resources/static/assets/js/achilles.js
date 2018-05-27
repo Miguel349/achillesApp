@@ -42,21 +42,22 @@ var ACHILLES = (function () {
 
       //kilometros pasar 0,1 para kilorias y metros.
 
-      var sensor1= Math.floor(Math.random() * 5) + 1;
-      var sensor2= Math.floor(Math.random() * 5) + 1;
-      var sensor3= Math.floor(Math.random() * 5) + 1;
-      var sensor4= Math.floor(Math.random() * 5) + 1;
+      var sensor1= Math.floor(Math.random() * 5) ;
+      var sensor2= Math.floor(Math.random() * 5) ;
+      var sensor3= Math.floor(Math.random() * 5) ;
+      var sensor4= Math.floor(Math.random() * 5) ;
 
       calories += calories + 0,1;
-      kilometros += kilometros + 0,2;
+      meters += meters + 0,2;
 
-       $('#kmRecorridos').text(kilometros);
+       $('#kmRecorridos').text(meters);
        $('#caloriasQuemadas').text(calories);
 
       $.post( "/achilles/recordData",{foot:foot,sensor1:sensor1,sensor2:sensor2,sensor3:sensor3,sensor4:sensor4,calories:calories,meters:meters}, function( data ) {
+        console.log(data);
         $('#'+foot).removeClass("false").removeClass("true").addClass(data.toString());
       });
-    }, 10000);
+    }, 500);
 
   }
 

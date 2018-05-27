@@ -1,6 +1,8 @@
 $( document ).ready(function() {
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
+  google.charts.setOnLoadCallback(drawChart2);
+
   $('#kcal').touchOClick(function(){
     $('#curve_kcal').show();
     $('#curve_chart').hide();
@@ -9,6 +11,7 @@ $( document ).ready(function() {
     $('#curve_kcal').hide();
     $('#curve_chart').show();
   });
+  function drawChart(){
      var data = google.visualization.arrayToDataTable([
        ['Sesion', 'KMs',],
        ['Season 1',  3],
@@ -26,10 +29,11 @@ $( document ).ready(function() {
      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
 
      chart.draw(data, options);
-   }
+  }
+
    function drawChart2() {
      var data = google.visualization.arrayToDataTable([
-       ['Sesion', 'KCAL',],
+       ['Sesion', 'KCAL'],
        ['Season 1',  325],
        ['Season 2',  477],
        ['Season 3', 700],
