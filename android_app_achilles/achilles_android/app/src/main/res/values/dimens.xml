@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="editText_textSize_login">22sp</dimen>
+    <dimen name="padding_horizontal_login">32dp</dimen>
+    <dimen name="textSizeDontHaveAccount">16sp</dimen>
+    <dimen name="edittext_margin_createacount">10dp</dimen>
+    <dimen name="height_cardView">200dp</dimen>
+    <dimen name="cornerRadius_cardView">4dp</dimen>
+    <dimen name="textsizeusernamecard">25sp</dimen>
+    <dimen name="firstWord_textSizeCard">15sp</dimen>
+    <dimen name="timecard_leftmargin">5dp</dimen>
+    <dimen name="like_margin_top">10dp</dimen>
+    <dimen name="height_card_view">200dp</dimen>
+    <dimen name="bottombar_height">70dp</dimen>
+</resources>

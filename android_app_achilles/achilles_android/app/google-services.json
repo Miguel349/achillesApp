@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "950268459456",
+    "firebase_url": "https://adidashack-d3a07.firebaseio.com",
+    "project_id": "adidashack-d3a07",
+    "storage_bucket": "adidashack-d3a07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950268459456:android:82edc90bd857db09",
+        "android_client_info": {
+          "package_name": "com.fixie.padugram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950268459456-ft5iltdp3nq2bfsv17ark6vj2himu3vs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fixie.padugram",
+            "certificate_hash": "ac1abb6524c192f56fb2cca92297b195111d533a"
+          }
+        },
+        {
+          "client_id": "950268459456-o8c62fe3d1gbdtqojq2nu4rob0jvnh4d.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "950268459456-o8c62fe3d1gbdtqojq2nu4rob0jvnh4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI9d6a_KRVkrpZhbz533sqcaZcbGwqeQ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950268459456-o8c62fe3d1gbdtqojq2nu4rob0jvnh4d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

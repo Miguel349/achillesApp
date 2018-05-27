@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Achilles</string>
+    <string name="title_activity_reference">ReferenceActivity</string>
+    <string name="username"> Nombre de usuario </string>
+    <string name="hintPassword"> Contraseña </string>
+    <string name="loginButton">Login</string>
+    <string name="dont_have_account">No tienes cuenta?</string>
+    <string name="create_here">  crea una aquí.</string>
+    <string name="correo">Email</string>
+    <string name="name_hint">nombre</string>
+    <string name="hint_confirm_password">confirmar contraseña</string>
+    <string name="create_account">Unete!</string>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+    <string name="toolbar_title_createaccount">Crear cuenta</string>
+    <string name="usernameCardText">Foo Bar</string>
+    <string name="firstWordCard">Hace</string>
+    <string name="timeCard">10</string>
+    <string name="tab_search">Buscar</string>
+    <string name="tab_home">Home</string>
+    <string name="tab_profile">Perfil</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="CHOOSESPORT">FirstScreen</string>
+    <string name="mainActivitySport">MainSport</string>
+</resources>
