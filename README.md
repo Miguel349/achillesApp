@@ -1,3 +1,9 @@
+
+# Team Name: Achilles
+
+# Team Members: Alberto de Miguel, Diego Gutierrez Blanco, Miguel Pagan Murphy, Sebastián Paduano
+
+
 # AchillesProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
