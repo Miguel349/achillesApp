@@ -75,9 +75,6 @@ public class ContainerActivity extends AppCompatActivity {
         webView.loadUrl("https://achillesapp-205313.appspot.com");
 
         t1 = (TextView) findViewById(R.id.bluetoothConnection);
-
-
-
     }
 
     public void setw() throws IOException{
