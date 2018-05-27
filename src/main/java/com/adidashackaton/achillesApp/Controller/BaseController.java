@@ -23,8 +23,13 @@ public class BaseController extends Base {
     @Autowired
     private UserDataService userDataService;
 
-    @GetMapping("/")
+    @GetMapping("/achilles/getLoggedUserHome")
     public String hello(HttpServletRequest httpServletRequest) {
         return "index.html";
+    }
+
+    @GetMapping("/achilles/getLoggedUserHome2")
+    public String helloWorld(HttpServletRequest httpServletRequest) {
+        return "static/index.html";
     }
 }
