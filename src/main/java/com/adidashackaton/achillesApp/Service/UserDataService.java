@@ -1,6 +1,7 @@
 package com.adidashackaton.achillesApp.Service;
 
 import com.adidashackaton.achillesApp.Persistance.UserDataRepository;
+import com.adidashackaton.achillesApp.pojos.Sesion;
 import com.adidashackaton.achillesApp.pojos.User;
 import com.adidashackaton.achillesApp.pojos.UserData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ public class UserDataService {
     @Autowired
     private UserDataRepository userDataRepository;
 
-    public UserData saveNewUserData(User user, String foot, double sensor1, double sensor2, double sensor3, double sensor4, double calories, double meters){
+    public UserData saveNewUserData(User user, String foot, double sensor1, double sensor2, double sensor3, double sensor4, double calories, double meters, Sesion sesion){
         UserData userData=new UserData();
         userData.setFoot(foot);
         userData.setSensor1(sensor1);
@@ -21,6 +22,7 @@ public class UserDataService {
         userData.setSensor4(sensor4);
         userData.setUser(user);
         userData.setMeters(meters);
+        userData.setSesion(sesion);
         return userDataRepository.save(userData);
     }
 }

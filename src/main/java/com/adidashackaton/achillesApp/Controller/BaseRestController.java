@@ -1,7 +1,9 @@
 package com.adidashackaton.achillesApp.Controller;
 
+import com.adidashackaton.achillesApp.Service.SesionService;
 import com.adidashackaton.achillesApp.Service.UserDataService;
 import com.adidashackaton.achillesApp.Service.UserService;
+import com.adidashackaton.achillesApp.pojos.Sesion;
 import com.adidashackaton.achillesApp.pojos.User;
 import com.adidashackaton.achillesApp.pojos.UserData;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class BaseRestController extends Base{
     @Autowired
     private UserDataService userDataService;
 
+    @Autowired
+    private SesionService sesionService;
+
     @PostMapping("/achilles/getGlobalStats")
     public String recordData(HttpServletRequest httpServletRequest) {
         return "";
@@ -30,12 +35,14 @@ public class BaseRestController extends Base{
     @PostMapping("/achilles/recordData")
     public Boolean recordData(String foot, Double sensor1, Double sensor2, Double sensor3, Double sensor4, Double calories, Double meters, HttpServletRequest httpServletRequest){
         String userId = getLoggedUserId(httpServletRequest);
+        userId="sebas";
         if (userId != null) {
             User user = userService.getUser(userId);
             if(user==null){
                 return false;
             }
-            UserData userData = userDataService.saveNewUserData(user, foot, sensor1, sensor2, sensor3, sensor4, calories, meters);
+            Sesion sesion= sesionService.getSesions(user);
+            UserData userData = userDataService.saveNewUserData(user, foot, sensor1, sensor2, sensor3, sensor4, calories, meters, sesion);
             String sport = "football";
 
             if (sport.equals("football")) {

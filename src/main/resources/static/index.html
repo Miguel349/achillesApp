@@ -16,9 +16,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <script src="./assets/js/routing.js">
-
   </script>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="./assets/js/achilles.js">
+  </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
@@ -64,6 +65,56 @@
 <div class="stats-view col-lg-12">
   <h1>Stats</h1>
 </div>
+<div id="startSesion" style="display:none">
+  <div class="row">
+  <div class="col-xs-12">
+    <div class="header">
+    Calibrando... Por favor espere...
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="content">
+          <img class="loadingImage" src="../assets/image/piesrojos.png">
+          <div class="row">
+            <div class="button startRunning">
+              Empezar
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div id="runningInterface" style="display:none">
+  <div class="row">
 
+  <div class="title">
+      Session
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-xs-3">
+    <div class="leftFoot">
+
+    </div>
+  </div>
+  <div class="col-xs-6">
+    <p class="kmRecorridos">KM Recorridos <b id="kmRecorridos">0</b></p>
+    <p class="caloriasQuemadas">KM Recorridos <b id="caloriasQuemadas">0</b></p>
+  </div>
+  <div class="col-xs-3">
+    <div class="rightFoot">
+
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  console.log("STARTING...");
+  $(document).ready(function(){
+    ACHILLES.init();
+  });
+</script>
 </body>
 </html>
