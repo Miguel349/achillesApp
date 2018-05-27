@@ -1,0 +1,69 @@
+@font-face{
+    font-family:'apercu';
+    src: './fonts/Apercu-Light.woff'
+}
+
+body{
+  background:  #1A1A1A;
+}
+
+.main-view{
+  color: white;
+  margin-top: 5%;
+  font-family: 'apercu';
+  font-weight: bold;
+  font-size: 100%;
+
+}
+#icon-back{
+  float:left;
+  color: #FFB900;
+}
+#title-up{
+  float: right;
+  font-size: 120%;
+}
+.stats{
+  margin-top: 40%;
+}
+.title-stats{
+  margin-left: 40%;
+}
+.img-stats {
+  float: left;
+}
+.img-stats img{
+  width: 100px;
+  height: 100px;
+}
+.activity{
+  margin-top: 25%;
+}
+.title-activity{
+  margin-right: 40%;
+}
+.img-activity{
+  float: right;
+}
+.img-activity img{
+  width: 100px;
+  height: 100px;
+}
+.bottom{
+  margin-top: 15%;
+  float: right;
+}
+hr{
+  margin-top: 52%;
+width: 50%;
+color:#EAEAEA;
+}
+
+.stats-view{
+  color: white;
+  margin-top: 5%;
+  font-family: 'apercu';
+  font-weight: bold;
+  font-size: 100%;
+  display: none;
+}
