@@ -116,8 +116,10 @@ color:#EAEAEA;
 
 .title{
   font-color:black;
-  font-size:15px;
+  font-size:40px;
   text-align:center;
+  margin-top:15px;
+  margin-bottom:15px;
 }
 
 .leftFoot.true {
