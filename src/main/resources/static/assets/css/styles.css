@@ -116,7 +116,33 @@ color:#EAEAEA;
 
 .title{
   font-color:black;
-  font-size:15px;
+  font-size:40px;
   text-align:center;
+  margin-top:15px;
+  margin-bottom:15px;
 }
 
+.leftFoot.true {
+  width:100px;
+  height:250px;
+  background: url("../image/pie_izqd_verde.png");
+  background-size: 100%;
+}
+.leftFoot.false{
+  width:100px;
+  height:250px;
+  background:url("../image/pie_izqd_rojo.png");
+  background-size:100%
+}
+.rightFoot.true{
+  width:100px;
+  height:250px;
+  background:url("../image/pie_verde.png");
+  background-size:100%
+}
+.rightFoot.false{
+  width:100px;
+  height:250px;
+  background:url("../image/pie_rojo_derecho.png");
+  background-size:100%
+}

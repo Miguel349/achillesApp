@@ -35,9 +35,11 @@ public class BaseRestController extends Base{
     @PostMapping("/achilles/recordData")
     public Boolean recordData(String foot, Double sensor1, Double sensor2, Double sensor3, Double sensor4, Double calories, Double meters, HttpServletRequest httpServletRequest){
         Integer userId = getLoggedUserId(httpServletRequest);
-        userId=0;
+        if(userId==null){
+          userId=0;
+        }
         if (userId != null) {
-            User user = userService.getUser(0);
+            User user = userService.getUser(userId);
             if(user==null){
                 return false;
             }
@@ -73,7 +75,8 @@ public class BaseRestController extends Base{
     @PostMapping("/achilles/login")
     public Boolean login( String id,HttpServletRequest httpServletRequest){
         if(id!=null){
-            setLoggedUserId(httpServletRequest,id);
+          User user=userService.findByName(id);
+            setLoggedUserId(httpServletRequest,user.getId());
         }
         return true;
     }

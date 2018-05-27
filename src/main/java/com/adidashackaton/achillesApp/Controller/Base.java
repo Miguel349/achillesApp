@@ -12,7 +12,7 @@ public class Base {
         return userId;
     }
 
-    public void setLoggedUserId(HttpServletRequest httpServletRequest, String id){
+    public void setLoggedUserId(HttpServletRequest httpServletRequest, Integer id){
         HttpSession session = httpServletRequest.getSession(true);
         session.setAttribute("user", id);
     }
