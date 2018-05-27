@@ -60,13 +60,65 @@ color:#EAEAEA;
 }
 
 .stats-view{
-  color:#EAEAEA;
+  background: white;
+  color: black;
   margin-top: 5%;
   font-family: 'apercu';
   font-weight: bold;
   font-size: 100%;
   display: none;
 }
+#title-up-stats{
+  margin-left: 43%;
+  font-size: 120%;
+}
+#stat-title{
+  font-weight: bold;
+  margin-top: 20%;
+}
+#curve_chart{
+  margin-top: 6%;
+  margin-left: -23%;
+}
+.select{
+  display: inline-flex;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+.item-select{
+  margin-right: 20%;
+}
+#curve_kcal{
+  display: none;
+}
+.img-feet img{
+  width: 43%;
+  margin-top: 35%;
+
+}
+.data-chart{
+  width: 100%;
+  background: #EAEAEA;
+}
+.data-km{
+  font-weight: bold;
+  color: #FFB900;
+}
+.data-kcal{
+  font-weight: bold;
+  color: green;
+}
+.data-general{
+  font-weight: bold;
+  color: blue;
+}
+#der{
+
+}
+#izq{
+
+}
+
 
 .loadingImage{
   width:70%;

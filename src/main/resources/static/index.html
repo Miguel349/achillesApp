@@ -17,6 +17,8 @@
 
   <script src="./assets/js/routing.js">
   </script>
+  <script src="./assets/js/chart.js">
+  </script>
   <script src="./assets/js/achilles.js">
   </script>
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -63,7 +65,56 @@
   <hr>
 </div>
 <div class="stats-view col-lg-12">
-  <h1>Stats</h1>
+  <div class="col-lg-2">
+    <div class="glyphicon glyphicon-chevron-left col-lg-1" id="icon-back-stats">
+
+    </div>
+    <div class="col-lg-1" id="title-up-stats">
+        <p>
+          - Analiza tus resultados
+        </p>
+
+    </div>
+  </div>
+  <div class="stats-title col-lg-1" id="stat-title">
+    <h1>_STATS</h1>
+  </div>
+  <div class="chart-stats col-lg-12" id="chart-start">
+    <div id="curve_chart" ></div>
+    <div id="curve_kcal" ></div>
+    <div class="select">
+      <div id="km" class="item-select">
+        <p>KM</p>
+      </div>
+      <div id="kcal" class="item-select">
+        <p>Kcal</p>
+      </div>
+    </div>
+  </div>
+  <div class="data-chart col-lg-12">
+    <div class="row">
+      <div class="img-feet col-xs-8">
+        <img src="../assets/image/pie.png" alt="" id="der">
+        <img src="../assets/image/pie izqd.png" alt="" id="izq">
+      </div>
+      <div class="data col-xs-4">
+        <div class="data-km">
+          <h3>30</h3>
+          <p>KILOMETROS RECORRIDOS</p>
+        </div>
+        <div class="data-kcal">
+          <h3>1600</h3>
+          <p>KILOCAL QUEMADAS</p>
+        </div>
+        <div class="data-general">
+          <h3>65%</h3>
+          <p>VALORACION FINAL</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 </div>
 <div id="startSesion" style="display:none">
   <div class="row">

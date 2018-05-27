@@ -20,6 +20,12 @@ var ACHILLES = (function () {
       $('#runningInterface').show();
       startRunning();
     });
+    $('.title-stats').touchOClick(function(){
+      $('.main-view').hide();
+      $('#startSesion').hide();
+      $('.stats-view').show();
+    });
+
 
   }
 
