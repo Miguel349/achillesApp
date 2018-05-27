@@ -1,0 +1,71 @@
+const int PIEZO_PIN1 = A0;
+ const int PIEZO_PIN2 = A1;
+ const int PIEZO_PIN3 = A2;
+ const int PIEZO_PIN4 = A3;// Piezo output
+ boolean ledOn=false;
+
+void setup() {
+   Serial.begin(9600);
+     pinMode(LED_BUILTIN, OUTPUT);
+     ledOn=false;
+}
+
+void loop() {
+  int piezoADC1 = analogRead(PIEZO_PIN1);
+  int piezoADC2 = analogRead(PIEZO_PIN2);
+  int piezoADC3 = analogRead(PIEZO_PIN3);
+  int piezoADC4 = analogRead(PIEZO_PIN4);
+  float piezoV1 = piezoADC1 / 1023.0 * 5.0;
+  float piezoV2 = piezoADC2 / 1023.0 * 5.0;
+  float piezoV3 = piezoADC3 / 1023.0 * 5.0;
+  float piezoV4 = piezoADC4 / 1023.0 * 5.0;
+
+  if(piezoV1>0.01){
+          if(ledOn){
+                     digitalWrite(LED_BUILTIN, LOW);   // turn the LED on (HIGH is the voltage level)
+                     ledOn=false;
+                     delay(1000);
+            }
+            else{
+                        digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+                        ledOn=true;
+                        delay(1000);
+            }
+    }
+    if(piezoV2>0.01){
+          if(ledOn){
+                     digitalWrite(LED_BUILTIN, LOW);   // turn the LED on (HIGH is the voltage level)
+                     ledOn=false;
+                     delay(1000);
+            }
+            else{
+                        digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+                        ledOn=true;
+                        delay(1000);
+            }
+    }
+    if(piezoV3>0.01){
+          if(ledOn){
+                     digitalWrite(LED_BUILTIN, LOW);   // turn the LED on (HIGH is the voltage level)
+                     ledOn=false;
+                     delay(1000);
+            }
+            else{
+                        digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+                        ledOn=true;
+                        delay(1000);
+            }
+    }
+    if(piezoV4>0.01){
+          if(ledOn){
+                     digitalWrite(LED_BUILTIN, LOW);   // turn the LED on (HIGH is the voltage level)
+                     ledOn=false;
+                     delay(1000);
+            }
+            else{
+                        digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+                        ledOn=true;
+                        delay(1000);
+            }
+    }
+}
